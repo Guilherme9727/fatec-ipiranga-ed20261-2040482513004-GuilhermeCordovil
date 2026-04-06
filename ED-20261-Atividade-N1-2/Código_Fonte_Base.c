@@ -1,0 +1,33 @@
+/* FATEC-Ipiranga
+   ADS
+   Estrutura de Dados
+   Id da Atividade: N1-2
+   Objetivo: Estado de memória
+   Autor: Prof. Verissimo
+   Aluno: Guilherme Cordovil
+   Data: 05/04/2026
+*/
+
+#include <stdio.h>
+
+// Versão iterativa que imprime os digitos na ordem inversa
+void inverterNumero(int n) {
+    if (n == 0) {
+        printf("0");
+        return;
+    }
+    
+    while (n > 0) {
+        printf("%d", n % 10); // Imprime o último digito
+        n = n / 10;           // Remove o último digito do número
+    }
+}
+
+int main() {
+    int valor = 12345;
+    printf("Invertendo o numero %d: ", valor);
+    inverterNumero(valor);
+    printf("\n");
+    
+    return 0;
+}
